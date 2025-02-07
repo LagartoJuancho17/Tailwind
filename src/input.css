@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: Figtre;
+    src: url('../assets/fonts/Figtree-VariableFont_wght.ttf');
+}
+
+@theme{
+--color-Yellow: hsl(47, 88%, 63%);  /*Se pone --color para que Tailwind entienda que es una variable*/
+--color-White: hsl(0, 0%, 100%);
+--color-Gray500: hsl(0, 0%, 42%);
+--color-Gray950: hsl(0, 0%, 7%);
+--font-Figtree: 'Figtre';
+--shadow-card: 10px 10px var(--color-Gray950); /*Si veo que es un garron escribir la clase, puedo crear la mia personalizada asi es mas accesible*/
+}

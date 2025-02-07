@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Figtre;
+    src: url('./assets/fonts/Figtree-VariableFont_wght.ttf');
+}
+
+:root{
+--Yellow: hsl(47, 88%, 63%);
+--White: hsl(0, 0%, 100%);
+--Gray500: hsl(0, 0%, 42%);
+--Gray950: hsl(0, 0%, 7%);
+
+--font-Family: 'Figtre';
+}
+
+body{
+    background-color: var(--Yellow);
+    font-family: var(--font-Family);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: var(--Gray950);
+}
+
+.card{
+    background-color: var(--White);
+    width: 327px;
+    padding: 24px;
+    border-radius: 20px;
+    border: 1px solid var(--Gray950);
+
+    box-shadow: 10px 10px var(--Gray950); /*Primero el desplazamiento vertical, luego el horizontal, si agrego otro es DIFUMINADO*/
+
+    & .foto{
+        width: 100%;
+        border-radius: 12px;
+        margin-bottom: 24px;
+    }
+    /*PROPIEDAD NUEVA DE CSS!!! NESTING*/
+    & .etiqueta{
+        background-color: var(--Yellow);
+        padding: 4px 12px;
+        display: inline-block; /*ETIQUETA DE LINEA Y TENGA PROPIEDAD DE BLOCK*/
+        font-weight: 800;
+        margin-bottom: 12px;
+        border-radius: 4px;
+    }
+    .fecha{
+        font-size: 0.75rem;
+        font-weight: 600;
+        margin-bottom: 16px;
+    }
+    .titulo{
+        font-size: 1.25rem;
+        font-weight: 800;
+        margin-bottom: 16px;
+    }
+    .descripcion{
+        color: var(--Gray500);
+        font-size: 0.875rem;
+        line-height: 1.5;
+        margin-bottom: 24px;
+    }
+    .contenedor-perfil{
+        display: flex;
+        align-items: center;
+        font-size: .75rem;
+        font-weight: 600;
+        
+        img{
+            margin-right: 16px;
+            width: 32px;
+        }
+    }
+}
